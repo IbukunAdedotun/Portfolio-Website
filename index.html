@@ -46,9 +46,14 @@ section>.wrap>h2{font-size:2rem;margin-bottom:28px}
 .tools{color:var(--muted);font-size:.95rem;margin:6px 0 12px}
 details{margin-top:14px}
 summary{cursor:pointer;font-weight:700;color:var(--teal)}
-details dl{margin:14px 0 0;display:grid;grid-template-columns:150px 1fr;gap:10px 18px}
+details dl{margin:14px 0 0;display:grid;grid-template-columns:170px 1fr;gap:10px 18px}
 details dt{font-weight:700}
 details dd{margin:0}
+details dd ul{margin:0;padding-left:1.2em}
+details dd li{margin-bottom:6px}
+.project p .btn{margin-top:6px}
+.shot{display:block;margin:16px 0 8px}
+.shot img{width:100%;height:auto;border-radius:8px;border:1px solid var(--line);display:block}
 .todo{background:#fff3d6;border-radius:3px;padding:0 4px}
 .job{display:grid;grid-template-columns:200px 1fr;gap:12px 28px;padding:18px 0;border-bottom:1px solid var(--line)}
 .job:last-child{border-bottom:0}
@@ -113,16 +118,32 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px sol
 
   <article class="project">
    <h3>Café Ibukun: coffee shop sales dashboard</h3>
-   <p class="tools">Excel</p>
-   <p>An Excel dashboard that tracks coffee shop sales. <span class="todo">[Add one sentence on what it helps a manager decide.]</span></p>
+   <p class="tools">Tableau Public · Excel</p>
+   <p>An interactive Tableau dashboard and written report on six months of sales across three New York City coffee shops. It shows which stores, products and days drive revenue, and where the business is leaving money on the table.</p>
+   <a class="shot" href="https://public.tableau.com/views/CoffeDataSet_17901666448000/CafeIbukun" target="_blank" rel="noopener"><img src="cafe-dashboard.jpg" width="1534" height="1021" alt="Café Ibukun coffee sales dashboard in Tableau showing total revenue, orders, revenue trend, revenue by store, sales by category, top five products and transactions by day of week"></a>
+   <p><a class="btn primary" href="https://public.tableau.com/views/CoffeDataSet_17901666448000/CafeIbukun" target="_blank" rel="noopener">Open the live dashboard</a> <a class="btn ghost" href="coffee-shop-sales-report.pdf" target="_blank" rel="noopener">Read the full report (PDF)</a></p>
    <details>
     <summary>Read the case study</summary>
     <dl>
-     <dt>Business question</dt><dd><span class="todo">[What were you trying to find out?]</span></dd>
-     <dt>Data</dt><dd><span class="todo">[Source, size, how you cleaned it.]</span></dd>
-     <dt>Process</dt><dd><span class="todo">[Key steps, formulas, pivot tables, charts.]</span></dd>
-     <dt>Insights</dt><dd><span class="todo">[What the data showed and what you recommend.]</span></dd>
-     <dt>Links</dt><dd><a href="#">View screenshots or walkthrough</a> · <a href="#">Download the file</a></dd>
+     <dt>Business question</dt><dd>What is driving sales across the three stores, and where is the business missing opportunities?</dd>
+     <dt>Data</dt><dd>A public coffee shop sales dataset covering 149,116 transactions across three NYC locations (Astoria, Hell’s Kitchen and Lower Manhattan), January to June 2023.</dd>
+     <dt>Process</dt><dd>Prepared the data with helper columns in Excel, then built a branded Tableau dashboard with KPI cards (revenue, orders, average order value, units sold), a revenue trend, revenue by store, sales by category, top five products and a day-of-week view. Filters let users explore by store, category and product.</dd>
+     <dt>Key insights</dt><dd><ul>
+      <li>Monthly sales roughly doubled, from $82K in January to $166K in June.</li>
+      <li>Most customers buy between 8 and 10 in the morning, and sales drop sharply after 6pm, which points to a commuter crowd.</li>
+      <li>Coffee and tea carry the business. Bakery items barely move. Barista Espresso, Brewed Chai Tea and Gourmet Coffee are the top sellers.</li>
+      <li>Hell’s Kitchen earns the most revenue, with Lower Manhattan close behind.</li>
+      <li>Saturday has the fewest transactions of any day.</li>
+     </ul></dd>
+     <dt>Root cause</dt><dd>A 5 Whys analysis of the Saturday dip showed the problem is not that weekends are naturally quiet. The shop plans and staffs Saturday exactly like a weekday, so nothing gives weekend visitors a reason to come in.</dd>
+     <dt>Recommendations</dt><dd><ul>
+      <li>Run a Saturday promotion or feature item to create a weekend reason to visit.</li>
+      <li>Plan staffing and prep around the 8 to 10am rush.</li>
+      <li>Test an after-6pm deal to win back the evening slot.</li>
+      <li>Bundle bakery with coffee or tea instead of selling it alone.</li>
+      <li>Study what Hell’s Kitchen does differently and try it at Lower Manhattan.</li>
+     </ul></dd>
+     <dt>Links</dt><dd><a href="https://public.tableau.com/views/CoffeDataSet_17901666448000/CafeIbukun" target="_blank" rel="noopener">Live Tableau dashboard</a> · <a href="coffee-shop-sales-report.pdf" target="_blank" rel="noopener">Full report (PDF)</a></dd>
     </dl>
    </details>
   </article>
